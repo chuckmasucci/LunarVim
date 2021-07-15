@@ -1,8 +1,8 @@
 -- better window movement
-vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { silent = true })
-vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { silent = true })
-vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { silent = true })
-vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { silent = true })
+-- vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { silent = true })
+-- vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { silent = true })
+-- vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { silent = true })
+-- vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { silent = true })
 
 -- Terminal window navigation
 vim.api.nvim_set_keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", { silent = true, noremap = true })

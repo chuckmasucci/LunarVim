@@ -366,6 +366,40 @@ return require("packer").startup(function(use)
     disable = not O.plugin.ts_hintobjects.active,
   }
 
+  -- Better motions
+  use {
+    "phaazon/hop.nvim",
+    event = "BufRead",
+    -- config = function()
+    --   require("lv-hop").config()
+    -- end,
+    opt = true,
+  }
+
+  -- Vim Tmux Navigator
+  use { "christoomey/vim-tmux-navigator" }
+
+  -- use {
+  --   "christoomey/vim-tmux-navigator",
+  --   config = function()
+  --     vim.api.nvim_set_keymap("n", "<C-h>", ":TmuxNavigateLeft<cr>", { silent = true })
+  --     vim.api.nvim_set_keymap("n", "<C-j>", ":TmuxNavigateDown<cr>", { silent = true })
+  --     vim.api.nvim_set_keymap("n", "<C-k>", ":TmuxNavigateUp<cr>", { silent = true })
+  --     vim.api.nvim_set_keymap("n", "<C-l>", ":TmuxNavigateRight<cr>", { silent = true })
+  --   end,
+  --   opt = true,
+  -- }
+
+  -- Vim Conflicted
+  use { "tpope/vim-fugitive" }
+  use { "christoomey/vim-conflicted" }
+  -- use {
+  --   "christoomey/vim-conflicted",
+  --   requires = {
+  --     { "tpope/vim-fugitive", opt = true }
+  --   },
+  -- }
+
   for _, plugin in pairs(O.user_plugins) do
     packer.use(plugin)
   end
